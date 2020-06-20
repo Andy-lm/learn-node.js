@@ -1,10 +1,12 @@
 // 将数据转换为16进制
-let buf = Buffer.alloc(5, "李");
+let buf = Buffer.alloc(5, "a");
 console.log(buf); // <Buffer 00 00 00 00 00>
 let buf2 = Buffer.from("abc");
 console.log(buf2);
 // 以对应的ASCII码的形式输出
-console.log(buf2[1]);
+// console.log(buf2[1]);
+buf2[1] = 6;
+console.log(buf2);
 console.log(buf2[1].toString());
 
 console.log(buf2.toString());
