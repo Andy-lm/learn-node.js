@@ -13,11 +13,12 @@ fs.stat(__dirname, function (err, stats) {
         console.log("当前路径对应的一个文件夹");
     }
 })
-console.log(__dirname); 
- */
+console.log(__dirname); */
 
-/* // 同步获取文件信息
+
+// 同步获取文件信息
 let obj = fs.statSync(__dirname);
 console.log(obj.birthtime);
 console.log(obj.isFile());
- */
+console.log(obj);
+
