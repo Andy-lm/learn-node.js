@@ -2,6 +2,7 @@ let path = require("path");
 let fs = require("fs");
 let pathName = path.join(__dirname, "12-data.txt");
 
+// 创建一个写入流
 let writeStream = fs.createWriteStream(pathName, {
     encoding: "utf-8"
 });
