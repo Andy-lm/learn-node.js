@@ -21,5 +21,5 @@ readstream.on("data", function (data) {
 })
 
 readstream.on("close", function () {
-    console.log("数据流和文件断开了关系，数据读取完毕");
+    console.log("数据流和文件断开了连接，数据读取完毕");
 })

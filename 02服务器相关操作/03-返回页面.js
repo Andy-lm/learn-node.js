@@ -4,6 +4,7 @@ let fs = require("fs");
 
 // 创建服务器请求对象
 http.createServer(function (req, res) {
+    // req.url用于获取请求的地址
     if (req.url.startsWith("/index")) {
         let pathName = path.join(__dirname, "www", req.url);
         // 根据请求地址在服务器中读取对应的文件

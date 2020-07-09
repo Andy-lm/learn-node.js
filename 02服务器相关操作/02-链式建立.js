@@ -7,7 +7,7 @@ http.createServer(function (req, res) {
         "Content-Type": "text/plain;charset=utf-8"
     });
     // req用来接收浏览器返回过来的数据
-    // console.log(req.url);
+    console.log(req.url);
     if (req.url.startsWith("/index")) {
         /* end方法：
         1.结束请求

@@ -2,7 +2,7 @@ let path = require("path");
 let fs = require("fs");
 
 // 确定读取路径
-let readPath = path.join(__dirname, "music.mp3")
+let readPath = path.join(__dirname, "music.mp3");
 // 确定写入路径
 let writePath = path.join(__dirname, "copy.mp3");
 

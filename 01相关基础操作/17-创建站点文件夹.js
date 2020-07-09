@@ -14,9 +14,11 @@ class CreatProject {
         // 2.创建子文件夹与子文件
         this.subFiles.forEach(function (fileName) {
             if (path.extname(fileName) === "") {
+                // 无扩展名创建为目录
                 let dirPath = path.join(pathName, fileName);
                 fs.mkdirSync(dirPath);
             } else {
+                // 有扩展名创建为文件
                 let dirPath = path.join(pathName, fileName);
                 fs.writeFileSync(dirPath, "");
             }

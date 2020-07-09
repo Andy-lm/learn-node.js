@@ -1,4 +1,5 @@
 // 将数据转换为16进制
+// 使用5个字节存储
 let buf = Buffer.alloc(5, "a");
 console.log(buf); // <Buffer 00 00 00 00 00>
 let buf2 = Buffer.from("abc");
