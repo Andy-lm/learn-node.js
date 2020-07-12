@@ -26,6 +26,10 @@ lmModule._extensions = {
         // 3.将将字符串转换为js代码
         let jsScript = vm.runInThisContext(strScript);
         // 4.执行转换完成后的JS代码
+        /* 
+        让我们包裹的函数内部的this指向module.exports这个我们创建好的对象（相当于其执行的代码所使用的参数都为module.exports里面的参数），让其的exports为module.exports，
+        所以其内部使用exports暴露的代码相当于给我们之后返回出去的module.exports添加属性与方法
+         */
         jsScript.call(module.exports, module.exports);
     },
     ".json": function (module) {

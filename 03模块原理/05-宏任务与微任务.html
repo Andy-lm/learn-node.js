@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <button class="add">添加段落</button>
+    <button class="del">删除段落</button>
+    <script>
+        /* // 立刻执行的异步任务，不能设延迟时间，ie浏览器独有
+        setImmediate(function () {
+            console.log(1111111111);
+        }) */
+
+        let div = document.querySelector("div");
+        let addBtn = document.querySelector(".add");
+        let delBtn = document.querySelector(".del");
+        let index = 0;
+        addBtn.addEventListener("click", function () {
+            let p = document.createElement("p");
+            p.innerHTML = "我是段落" + index;
+            index++;
+            div.appendChild(p);
+        });
+        delBtn.addEventListener("click", function () {
+            div.removeChild(div.children[div.children.length - 1]);
+        });
+
+        let observe = new MutationObserver(function () {
+            console.log("子节点发生了变化");
+        });
+        observe.observe(div, {
+            childList: true,
+        })
+    </script>
+</body>
+
+</html>
