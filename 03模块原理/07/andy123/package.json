@@ -1,0 +1,12 @@
+{
+  "name": "andy123",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node lm.js name=lm age=18"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
